@@ -37,10 +37,17 @@
                 <div class="row">
                     <h3>Album section</h3>
                     <p>Album description</p>
+                    <!--UPLOAD PICTURES-->
+                    <input type="file" id="upPic" onclick="upload_pic()">
+                    <p id="PicPath"></p>
+                    
+                    <!--UPLOAD PICTURES-->
                 </div>
                 <!--Album content-->
                     <!--row 1 for images -->
+                    <!--
                     <div class="row">
+                    -->
                         <!--Image1-->
                         <div class="col-sm-4">
                  
@@ -87,9 +94,13 @@
                                 </div>
                                 <!--LIKES-->
                         </div>
+                    <!--
                     </div>
+                    -->
                     <!--row 2 for images -->
+                    <!--
                     <div class="row">
+                    -->
                         <!--Image1-->
                         <div class="col-sm-4">
                             
@@ -108,8 +119,9 @@
                                 <img src="cuteCats.jpg" class="img-fluid img-thumbnail" alt="...">
                            
                         </div>
+                    <!--
                     </div>
-                    
+                    -->
             <!--CHAT section-->
             <div class="row">
                 <h3>Chat section</h3>
@@ -161,7 +173,6 @@
     let img1= new like_obj(0); img2= new like_obj(0); img3= new like_obj(0)
      
     // get the input message and display the message for the chat section:
-    
     var x;
     var count_send=0;
     var msg_container=[];
@@ -191,6 +202,13 @@
         document.getElementById("msg-bubble 1").innerHTML=whole_msg;
     }
 
+    //upload pictures:
+    function upload_pic ()
+    {
+        var pic1= document.getElementById("upPic").value;
+        console.log("<img src="+"\"cuteCats.jpg\""+" class=\"img-fluid img-thumbnail img-rounded\">");
+        document.getElementById("PicPath").innerHTML="<img src="+"\"cuteCats.jpg\""+" class=\"img-fluid img-thumbnail img-rounded\">";
+    }
     </script>
     <!--JAVASCRIPT CODES FOR DYNAMIC WEB-->
   
